@@ -1,0 +1,24 @@
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build Site
+        run: go run .
+
+      # https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/
+      - name: Publish
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: "flp-wiki"
+          directory: "dist"
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
