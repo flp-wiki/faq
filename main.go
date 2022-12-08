@@ -20,6 +20,12 @@ func main() {
 	data := []Items{
 		{
 			Path:     "",
+			Question: "What is this flp.wiki FAQ thing?",
+			Answer:   “A clever way to answer questions that are asked often.”,
+			Redirect: "https://github.com/djsime1/awesome-flipperzero/blob/main/FAQ.md",
+		},
+		{
+			Path:     "like",
 			Question: "Do you like answering the same questions over and over??",
 			Answer:   "We like helping people learn but it does get a little repetitive. So we made this site to help.",
 			Redirect: "https://github.com/djsime1/awesome-flipperzero/blob/main/FAQ.md",
@@ -39,7 +45,7 @@ func main() {
 		{
 			Path:     "bettse",
 			Question: "Why is bettse a jerk?",
-			Answer:   "He's not a jerk, he's just a little misunderstood.",
+			Answer:   "He's not a jerk, he's just a little misunderstood. Some even call him NFC Gandalf",
 			Redirect: "https://ericbetts.org",
 		},
 		{
