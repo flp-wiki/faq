@@ -22,7 +22,7 @@ func main() {
 			Path:     "",
 			Question: "What is this flp.wiki FAQ thing?",
 			Answer:   "A clever way to answer questions that are asked often.",
-			Redirect: "https://github.com/djsime1/awesome-flipperzero/blob/main/FAQ.md",
+			Redirect: "https://github.com/flp-wiki/faq",
 		},
 		{
 			Path:     "like",
