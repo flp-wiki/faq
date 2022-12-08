@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>{{.Question}}</title>
+    <meta name="description" content="{{.Answer}}">
+    <meta name="twitter:image:src" content="https://flp.wiki/{{.Path}}/image.gif">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{.Question}}">
+    <meta name="twitter:description" content="{{.Answer}}">
+    <meta property="og:image" content="https://flp.wiki/{{.Path}}/image.gif">
+    <meta property="og:image:alt" content="{{.Answer}}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+    <meta property="og:site_name" content="flp.wiki - Community FAQ">
+    <meta property="og:type" content="object">
+    <meta property="og:title" content="{{.Question}}">
+    <meta property="og:url" content="https://flp.wiki/{{.Path}}">
+    <meta property="og:description" content="{{.Answer}}">
+</head>
+
+<body>
+    <h1>{{.Path}}</h1>
+
+    <img src="image.gif" alt="Q: {{.Question}} / A:{{.Answer}}">
+    <p>{{.Question}}</p>
+    <p>{{.Answer}}</p>
+    <p><a href="{{.Redirect}}">More Info...</a></p>
+</body>
+
+</html>

@@ -14,7 +14,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func Generate() error {
+func Generate(q, a, p string) error {
 	dc := gg.NewContext(1200, 628)
 
 	drawBackground(dc)
@@ -25,12 +25,12 @@ func Generate() error {
 
 	askI := gg.NewContextForImage(dc.Image())
 
-	if err := ask(askI, "Can I clone my Credit Card with the flipper?"); err != nil {
+	if err := ask(askI, q); err != nil {
 		return errors.Wrap(err, "draw ask")
 	}
 
 	answerI := gg.NewContextForImage(dc.Image())
-	if err := answer(answerI, "No, It has encryption why would you want to clone your card? Have you thought about fraud?"); err != nil {
+	if err := answer(answerI, a); err != nil {
 		return errors.Wrap(err, "draw answerer")
 	}
 
@@ -38,8 +38,7 @@ func Generate() error {
 	draw.FloydSteinberg.Draw(palettedImage1, askI.Image().Bounds(), askI.Image(), image.ZP)
 	palettedImage2 := image.NewPaletted(answerI.Image().Bounds(), palette.Plan9)
 	draw.FloydSteinberg.Draw(palettedImage2, answerI.Image().Bounds(), answerI.Image(), image.ZP)
-	path := filepath.Join("dist", "image.gif")
-	f, err := os.Create(path)
+	f, err := os.Create("dist/" + p + "/image.gif")
 	if err != nil {
 		return errors.Wrap(err, "create gif file")
 	}
