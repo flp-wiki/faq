@@ -1,3 +1,5 @@
+![header](https://flp.wiki/image.gif)
+
 # flp.wiki community Quick FAQ
 
 This is the data and resources behind the [flp.wiki community FAQ](https://flp.wiki). The FAQ data is in `main.go`, and the code to generate images is in `gif/gif.go`.
