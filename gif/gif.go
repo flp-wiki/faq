@@ -141,7 +141,7 @@ func ask(dc *gg.Context, question string) error {
 func answer(dc *gg.Context, answer string) error {
 	fn := filepath.Join("assets", "answer.png")
 	i, err := gg.LoadImage(fn)
-	si := imaging.Resize(i, i.Bounds().Dx()*4, i.Bounds().Dy()*4, imaging.NearestNeighbor)
+	si := imaging.Resize(i, i.Bounds().Dx()*5, i.Bounds().Dy()*5, imaging.NearestNeighbor)
 	if err != nil {
 		return errors.Wrap(err, "load image")
 	}
