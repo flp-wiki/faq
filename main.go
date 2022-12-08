@@ -31,7 +31,7 @@ func main() {
 			Redirect: "https://github.com/djsime1/awesome-flipperzero/blob/main/FAQ.md#why-does-the-nfc-feature-table-say-bank-cards-can-be-read",
 		},
 		{
-			Path:     "nfc/mfc-emulation",
+			Path:     "nfc/mfc/emulation",
 			Question: "Why isn't Mifare Classic emulation working?",
 			Answer:   "Some card readers operate at slightly different frequencies and the flipper can't detect that like a card.",
 			Redirect: "https://github.com/djsime1/awesome-flipperzero/blob/main/FAQ.md#why-isnt-mifare-classic-emulation-working",
@@ -43,13 +43,13 @@ func main() {
 			Redirect: "https://ericbetts.org",
 		},
 		{
-			Path:     "nfc/mfkey",
+			Path:     "nfc/mfc/mfkey",
 			Question: "What is mfkey32v2?",
 			Answer:   "A way to use math to recover Mifare Classic keys from a reader.",
 			Redirect: "https://github.com/equipter/mfkey32v2#mfkey32-version-2",
 		},
 		{
-			Path:     "nfc/dict/stuck",
+			Path:     "nfc/mfc/dict/stuck",
 			Question: "Mifare Classic read is stuck!",
 			Answer:   "The LED is blinking, it is still working.  It has a lot of keys to test.",
 			Redirect: "https://github.com/djsime1/awesome-flipperzero/blob/main/FAQ.md#why-does-it-take-so-long-to-read-a-mifare-classic",
