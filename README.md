@@ -1,6 +1,6 @@
 # flp.wiki community Quick FAQ
 
-This is the data and resources behind the [flp.wiki community FAQ](https://flp.wiki). It includes the faq data in main.go, the code to generate images is in gif/gif.go.
+This is the data and resources behind the [flp.wiki community FAQ](https://flp.wiki). The FAQ data is in `main.go`, and the code to generate images is in `gif/gif.go`.
 
 *Note:* This is a community project not an official Flipper Zero project. It is not affiliated with the Flipper Zero team.
 
