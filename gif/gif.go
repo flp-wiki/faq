@@ -3,7 +3,6 @@ package gif
 import (
 	"image"
 	"image/color"
-	"image/color/palette"
 	"image/draw"
 	"image/gif"
 	"os"
@@ -37,9 +36,17 @@ func Generate(q, a, p string) error {
 		return errors.Wrap(err, "draw answerer")
 	}
 
-	palettedImage1 := image.NewPaletted(askI.Image().Bounds(), palette.Plan9)
+	palette := []color.Color{
+		color.RGBA{0xFF, 0x82, 0x00, 0xFF},
+		color.RGBA{0xBF, 0x62, 0x00, 0xFF},
+		color.RGBA{0x80, 0x41, 0x00, 0xFF},
+		color.RGBA{0x40, 0x21, 0x00, 0xFF},
+		color.Black,
+	}
+
+	palettedImage1 := image.NewPaletted(askI.Image().Bounds(), palette)
 	draw.FloydSteinberg.Draw(palettedImage1, askI.Image().Bounds(), askI.Image(), image.ZP)
-	palettedImage2 := image.NewPaletted(answerI.Image().Bounds(), palette.Plan9)
+	palettedImage2 := image.NewPaletted(answerI.Image().Bounds(), palette)
 	draw.FloydSteinberg.Draw(palettedImage2, answerI.Image().Bounds(), answerI.Image(), image.ZP)
 	f, err := os.Create("dist/" + p + "/image" + ghSHA + ".gif")
 	if err != nil {
