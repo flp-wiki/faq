@@ -1,30 +1,30 @@
 <html>
 
 <head>
-    <title>{{.Question}}</title>
-    <meta name="description" content="{{.Answer}}">
-    <meta name="twitter:image:src" content="https://flp.wiki/{{.Path}}/image.gif">
+    <title>{{.Item.Question}}</title>
+    <meta name="description" content="{{.Item.Answer}}">
+    <meta name="twitter:image:src" content="https://flp.wiki/{{.Item.Path}}/image{{.GHSHA}}.gif">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{.Question}}">
-    <meta name="twitter:description" content="{{.Answer}}">
-    <meta property="og:image" content="https://flp.wiki/{{.Path}}/image.gif">
-    <meta property="og:image:alt" content="{{.Answer}}">
+    <meta name="twitter:title" content="{{.Item.Question}}">
+    <meta name="twitter:description" content="{{.Item.Answer}}">
+    <meta property="og:image" content="https://flp.wiki/{{.Item.Path}}/image{{.GHSHA}}.gif">
+    <meta property="og:image:alt" content="{{.Item.Answer}}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="600">
     <meta property="og:site_name" content="flp.wiki - Community FAQ">
     <meta property="og:type" content="object">
-    <meta property="og:title" content="{{.Question}}">
-    <meta property="og:url" content="https://flp.wiki/{{.Path}}">
-    <meta property="og:description" content="{{.Answer}}">
+    <meta property="og:title" content="{{.Item.Question}}">
+    <meta property="og:url" content="https://flp.wiki/{{.Item.Path}}">
+    <meta property="og:description" content="{{.Item.Answer}}">
 </head>
 
 <body>
-    <h1>{{.Path}}</h1>
+    <h1>{{.Item.Path}}</h1>
 
-    <img src="image.gif" alt="Q: {{.Question}} / A:{{.Answer}}">
-    <p><b>Question:</b> {{.Question}}</p>
-    <p><b>Answer:</b> {{.Answer}}</p>
-    <p><a href="{{.Redirect}}">This probably has a more detailed answer...</a></p>
+    <img src="image{{.GHSHA}}.gif" alt="Q: {{.Item.Question}} / A:{{.Item.Answer}}">
+    <p><b>Question:</b> {{.Item.Question}}</p>
+    <p><b>Answer:</b> {{.Item.Answer}}</p>
+    <p><a href="{{.Item.Redirect}}">This probably has a more detailed answer...</a></p>
     <br>
     <br>
     <br>

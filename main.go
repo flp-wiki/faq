@@ -15,6 +15,11 @@ type Items struct {
 	Redirect string
 }
 
+type Page struct {
+	Item  Items
+	GHSHA string
+}
+
 func main() {
 
 	data := []Items{
@@ -74,7 +79,12 @@ func main() {
 		os.MkdirAll("dist/"+v.Path, 0755)
 		f, _ := os.Create("dist/" + v.Path + "/index.html")
 		defer f.Close()
-		pageTemplate.Execute(f, v)
+
+		page := Page{
+			Item:  v,
+			GHSHA: os.Getenv("GITHUB_SHA"),
+		}
+		pageTemplate.Execute(f, page)
 
 		if err := gif.Generate(v.Question, v.Answer, v.Path); err != nil {
 			fmt.Fprintf(os.Stderr, "%s\n", err)

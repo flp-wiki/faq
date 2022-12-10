@@ -15,6 +15,9 @@ import (
 )
 
 func Generate(q, a, p string) error {
+
+	ghSHA := os.Getenv("GITHUB_SHA")
+
 	dc := gg.NewContext(1200, 628)
 
 	drawBackground(dc)
@@ -38,7 +41,7 @@ func Generate(q, a, p string) error {
 	draw.FloydSteinberg.Draw(palettedImage1, askI.Image().Bounds(), askI.Image(), image.ZP)
 	palettedImage2 := image.NewPaletted(answerI.Image().Bounds(), palette.Plan9)
 	draw.FloydSteinberg.Draw(palettedImage2, answerI.Image().Bounds(), answerI.Image(), image.ZP)
-	f, err := os.Create("dist/" + p + "/image.gif")
+	f, err := os.Create("dist/" + p + "/image" + ghSHA + ".gif")
 	if err != nil {
 		return errors.Wrap(err, "create gif file")
 	}
