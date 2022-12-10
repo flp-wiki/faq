@@ -16,6 +16,9 @@
     <meta property="og:title" content="{{.Item.Question}}">
     <meta property="og:url" content="https://flp.wiki/{{.Item.Path}}">
     <meta property="og:description" content="{{.Item.Answer}}">
+    {{if .Item.AutoRedirect}}
+    <meta http-equiv="refresh" content="0; url = {{.Item.Link}}" />
+    {{end}}
 </head>
 
 <body>
@@ -24,7 +27,7 @@
     <img src="image{{.GHSHA}}.gif" alt="Q: {{.Item.Question}} / A:{{.Item.Answer}}">
     <p><b>Question:</b> {{.Item.Question}}</p>
     <p><b>Answer:</b> {{.Item.Answer}}</p>
-    <p><a href="{{.Item.Redirect}}">This probably has a more detailed answer...</a></p>
+    <p><a href="{{.Item.Link}}">This probably has a more detailed answer...</a></p>
     <br>
     <br>
     <br>
