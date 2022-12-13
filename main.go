@@ -58,7 +58,7 @@ func main() {
 			Path:     "equip",
 			Question: "What is Equip saying?",
 			Answer:   "we are not really sure... probably hasnt slept for 48hrs",
-			Link:     "https://github.com/equipter"
+			Link:     "https://github.com/equipter",
 		},
 		{
 			Path:         "nfc/mfc/mfkey",
