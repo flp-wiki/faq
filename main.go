@@ -55,6 +55,12 @@ func main() {
 			Link:     "https://ericbetts.org",
 		},
 		{
+			Path:     "equip",
+			Question: "What is Equip saying?",
+			Answer:   "we are not really sure... probably hasnt slept for 48hrs",
+			Link:     "https://github.com/equipter"
+		},
+		{
 			Path:         "nfc/mfc/mfkey",
 			Question:     "What is mfkey32v2?",
 			Answer:       "A way to use math to recover Mifare Classic keys from a reader.",
