@@ -61,6 +61,13 @@ func main() {
 			Link:     "https://github.com/equipter",
 		},
 		{
+			Path:     "reboot",
+			Question: "My Flipper is glitching/frozen!",
+			Answer:   "Hold down the back and left button to reboot the flipper",
+			Link:     "https://docs.flipperzero.one/basics/reboot#wdF0X",
+			AutoRedirect: true,
+		},
+		{
 			Path:         "nfc/mfc/mfkey",
 			Question:     "What is mfkey32v2?",
 			Answer:       "A way to use math to recover Mifare Classic keys from a reader.",
