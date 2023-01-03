@@ -86,6 +86,18 @@ func main() {
 			Answer:   "The Flipper team is not large, and they focus on the features they thing are most popular first",
 			Link:     "https://docs.flipperzero.one/",
 		},
+				{
+			Path:     "rfid/identify",
+			Question: "Why Wont the flipper recognise my RFID card",
+			Answer:   "The flipper can only identify a handful of rfid chips at the moment with more coming often",
+			Link:     "https://docs.flipperzero.one/",
+		},
+			Path:     "rfid/raw",
+			Question: "What is Reading Raw RFID",
+			Answer:   "If flipper cannot identify your RFID card, you can save the raw unfiltered data for later ID'ing",
+			Link:     "https://docs.flipperzero.one/",
+		},
+	
 	}
 
 	pageTemplate := template.Must(template.ParseFiles("template.html"))
