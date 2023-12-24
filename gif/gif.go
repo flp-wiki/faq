@@ -80,7 +80,7 @@ func drawQuestion(dc *gg.Context, s string) error {
 	}
 
 	dc.SetColor(textColor)
-	dc.DrawStringWrapped(s, x, (h / 2), 0, 0, w, 1.2, gg.AlignCenter)
+	dc.DrawStringWrapped(s, w/2+200, h/2+80, 0.5, 0.5, w, 1.2, gg.AlignCenter)
 	return nil
 }
 
