@@ -86,7 +86,19 @@ func main() {
 			Answer:   "The Flipper team is not large, and they focus on the features they thing are most popular first",
 			Link:     "https://docs.flipperzero.one/",
 		},
-				{
+		{
+			Path:     "subghz/rolling",
+			Question: "What is a rolling code?",
+			Answer:   "Rolling codes change the signal they send every button press. Trying to replay one could cause desync with your remote.",
+			Link:     "https://docs.flipperzero.one/",
+		},
+		{
+			Path:     "subghz/rolling/remote",
+			Question: "Why doesn't my remote work when trying to replay it?",
+			Answer:   "It likely uses a rolling code, which means the signal its ends changes every time. Trying to replay one could cause desync.",
+			Link:     "https://docs.flipperzero.one/",
+		},
+	  {
 			Path:     "rfid/identify",
 			Question: "Why Wont the flipper recognise my RFID card",
 			Answer:   "The flipper can only identify a handful of rfid chips at the moment with more coming often",
@@ -97,7 +109,6 @@ func main() {
 			Answer:   "If flipper cannot identify your RFID card, you can save the raw unfiltered data for later ID'ing",
 			Link:     "https://docs.flipperzero.one/",
 		},
-	
 	}
 
 	pageTemplate := template.Must(template.ParseFiles("template.html"))
