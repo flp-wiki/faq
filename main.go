@@ -82,7 +82,7 @@ func main() {
 		},
 		{
 			Path:     "nfc/support",
-			Question: "Why doesn't flipper support NFC-B/NFC-F/NFC-V/NTAG Write/other?",
+			Question: "Why doesn't flipper support NFC-B/NFC-F/Amiibo Write/other?",
 			Answer:   "The Flipper team is not large, and they focus on the features they thing are most popular first",
 			Link:     "https://docs.flipperzero.one/",
 		},
